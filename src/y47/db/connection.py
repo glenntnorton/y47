@@ -222,8 +222,8 @@ class MySQLConnection(Connection):
 class OracleConnection(Connection):
     """ example:
         from y47.db.connection import OracleConnection
-        connection = OracleConnection(host='127.0.0.1', user='test', 
-                                        passwd='test', sid='ora').connect
+        connection = OracleConnection(host='127.0.0.1', user='y47test', 
+                                        passwd='test', sid='XE').connect
         print connection
         <cx_Oracle.Connection to y47test@127.0.0.1/XE>
 
@@ -232,9 +232,9 @@ class OracleConnection(Connection):
         from y47.db.connection import OracleConnection
         connection = OracleConnection()
         connection.host = '127.0.0.1'
-        connection.user = 'test'
+        connection.user = 'y47test'
         connection.passwd = 'test'
-        connection.sid = 'ora'
+        connection.sid = 'XE'
         db = connection.connect
         print db
         <cx_Oracle.Connection to y47test@127.0.0.1/XE>

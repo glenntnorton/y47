@@ -25,3 +25,12 @@
 # 3. This notice may not be removed or altered from any source distribution.
 #
 #####  
+
+class DatabaseException(Exception):
+    pass
+
+class InvalidRowType(DatabaseException):
+    def __init__(self, row_type, row_types, msg=''):
+        DatabaseException.__init__(self, msg)
+        self.row_type = row_type
+        self.row_types = row_types
