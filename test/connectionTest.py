@@ -32,7 +32,7 @@ import unittest
 
 
 # path to SQLite3 database file
-FILENAME = r'/home/gnorton/Lib/_old/tests/com/year47/database/connection/test.db'
+FILENAME = r'test.db'
 
 
 # Connection (1)
