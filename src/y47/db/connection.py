@@ -238,6 +238,14 @@ class OracleConnection(Connection):
         db = connection.connect
         print db
         <cx_Oracle.Connection to y47test@127.0.0.1/XE>
+
+
+        UPDATE: 20140-01-28
+        NEED TO ADD THE OPTION FOR A MAKEDSN...
+        dsn_tns = cx_Oracle.makedsn('HOST', 1521, 'SID')
+        THEN...
+        db = cx_Oracle.connect('USER', 'PASSWD', dsn_tsn)
+
     """
     def __init__(self, host=None, user=None, passwd=None, sid=None, 
                 autocommit=1):
